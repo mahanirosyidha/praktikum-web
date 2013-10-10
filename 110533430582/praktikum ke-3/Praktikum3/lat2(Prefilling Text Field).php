@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
+<head>
+	<title>Prefilling Text Field</title> <!--judul untuk window/dokumen-->
+</head>
+
+<body>
+
+<form action="<?php $_SERVER['PHP_SELF'];?>" method="post">
+Nama
+<!--untuk memasukkan baris teks-->
+<input type="text" name="nama" 
+	value="<?php 
+	echo isset($_POST['nama']) ? $_POST['nama'] : '';
+	?>"
+/> <br/>
+
+<input type="submit" value="OK" /><!--tombol untuk melakukan proses-->
+</form>
+
+<?php
+if (isset($_POST['nama'])){
+	echo $_POST['nama'];
+}
+?>
+
+</body>
+</html>
