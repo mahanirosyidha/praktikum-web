@@ -8,7 +8,7 @@
 
 	<form action="<?php $_SERVER['PHP_SELF'];?>" method="post">
 	 Jenjang
-	 <select name="hobby">
+	 <select name="jenjang">
 		<option value="TK"
 		<?php
 		if($_POST['jenjang'] == 'TK'){
@@ -43,8 +43,8 @@
 </form>
 
 <?php
-if(isset($_POST['hobby'])){
-	echo $_POST['hobby'];
+if(isset($_POST['jenjang'])){
+	echo $_POST['jenjang'];
 }
 ?>
 
